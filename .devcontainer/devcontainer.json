@@ -1,0 +1,16 @@
+{
+  "name": "Secure Dynamic Kali Environment",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "features": {
+    "ghcr.io/devcontainers/features/sshd:1": {
+      "version": "latest"
+    }
+  },
+  "remoteUser": "developer",
+  "runArgs": [
+    "--cap-drop=NET_RAW",
+    "--cap-drop=NET_ADMIN"
+  ]
+}
